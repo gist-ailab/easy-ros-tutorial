@@ -13,7 +13,7 @@ class ColorDetector():
         rospy.loginfo("Starting color_detector node")
         rgb_sub = rospy.Subscriber("/rgb/image_raw", Image, self.callback)
         self.cv_bridge = cv_bridge.CvBridge()
-        self.result_pub = rospy.Publisher("/color_detect/image_raw", Image, queue_size=1)
+        self.result_pub = rospy.Publisher("/color_detect", Image, queue_size=1)
 
         self.lower_bound = np.array([155, 25, 0]) # hsv
         self.upper_bound = np.array([179, 255, 255]) # hsv
@@ -35,7 +35,7 @@ class ColorDetector():
         
         # publish it as topic
         self.result_pub.publish(img_msg)
-        rospy.loginfo_once("Published the result as topic. check '/color_detect'/image_raw")
+        rospy.loginfo_once("Published the result as topic. check /color_detect")
 
     
 if __name__ == '__main__':
