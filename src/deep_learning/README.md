@@ -1,6 +1,6 @@
 # Deep Learning
 
-- Let's learn to play with Azure Kinect in ROS
+Let's learn to play wit deep learning in ROS
 
 Setup anaconda environment and install dependencies
 ```
@@ -16,11 +16,21 @@ $ pip install git+https://github.com/nottombrown/imagenet_stubs
 ```
 
 ## Image Classification
-1. Run DNN server node (ROS, python 2.7)
+
+<img src="../../imgs/image_classification.png" height="200">
+
+1. Launch k4a driver
+```
+$ roslaunch azure_kinect_ros_driver driver.launch \
+color_resolution:=720P depth_mode:=NFOV_2X2BINNED fps:=5
+```
+
+2. Run DNN server node (ROS, python 2.7)
 ```
 $ conda activate easyros
 $ rosrun easy_ros_tutorial img_classifier.py
 ```
+
 3. Run DNN client node (ROS, python 3.7)
 ```
 # ROS1 does not support python 3.7 stably, while DNN often requires python 3.7
@@ -31,22 +41,30 @@ $ conda activate easyros-py37
 $ roscd easy_ros_tutorial && python src/deep_learning/img_classifier_client.py
 ```
 
-<img src="../../imgs/image_classification.png" height="200">
 
 
 ## Object Detection
-1. Run DNN server node (ROS, python 2.7)
+
+<img src="../../imgs/object_detection.png" height="200">
+
+1. Launch k4a driver
+```
+$ roslaunch azure_kinect_ros_driver driver.launch \
+color_resolution:=720P depth_mode:=NFOV_2X2BINNED fps:=5
+```
+
+2. Run DNN server node (ROS, python 2.7)
 ```
 $ conda activate easyros
 $ rosrun easy_ros_tutorial object_detector.py
 ```
+
 3. Run DNN client node (ROS, python 3.7)
 ```
 $ conda activate easyros-py37
 $ roscd easy_ros_tutorial && python src/deep_learning/object_detector_client.py
 ```
 
-<img src="../../imgs/object_detection.png" height="200">
 
 
 

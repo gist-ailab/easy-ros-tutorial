@@ -11,20 +11,21 @@
 
 1. [Environment Setup](./EnvSetup.md)
 2. [Camera](./src/camera/README.md)
-- [color detection](./src/camera/color_detector.py) \
+- [color detection](./src/camera/color_detector.py)   
 <img src="./imgs/color_detection.png" height="100">
 
 3. [Deep Learning](./src/deep_learning/README.md)
-- [image classification](./src/camera/img_classifier.py) \
+- [image classification](./src/camera/img_classifier.py)  
 <img src="./imgs/image_classification.png" height="100">
-- [object detection](./src/camera/object_detector.py) \
+- [object detection](./src/deep_learning/object_detector.py)  
 <img src="./imgs/object_detection.png" height="100">
 
 
 ## Coming next..
 
-- ROS + Moveit
 - Camera Calibration
+- pointcloud
+- Moveit
 
 ## Authors
 * **Seunghyeok Back** [seungback](https://github.com/SeungBack)
