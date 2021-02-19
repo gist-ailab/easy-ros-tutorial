@@ -13,6 +13,8 @@
 2. [Camera](./src/camera/README.md)
 - [color detection](./src/camera/color_detector.py)   
 <img src="./imgs/color_detection.png" height="100">
+- [extrinsic calibration](./src/camera/README.md)   
+<img src="./imgs/extrinsic_calibration.png" height="100">
 
 3. [Deep Learning](./src/deep_learning/README.md)
 - [image classification](./src/camera/img_classifier.py)  
@@ -23,7 +25,6 @@
 
 ## Coming next..
 
-- Camera Calibration
 - pointcloud
 - Moveit
 

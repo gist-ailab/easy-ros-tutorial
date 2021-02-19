@@ -28,8 +28,18 @@ color_resolution:=720P depth_mode:=NFOV_2X2BINNED fps:=5
 ```
 rosrun easy_ros_tutorial color_detector.py 
 rosrun rqt_image_view rqt_image_view
+
 ```
-![screensh](../../imgs/color_detection.png)
+<img src="../../imgs/color_detection.png" height="150">
 
 
+5. Extrinsic calibration ([azure_kinect_manager](https://github.com/SeungBack/azure_kinect_manager))
+```
+$ cd ~/catkin_ws/src
+$ git clone https://github.com/SeungBack/azure_kinect_manager
+$ ROS_NAMESPACE=azure1 roslaunch azure_kinect_ros_driver driver.launch color_resolution:=2160P depth_mode:=NFOV_2X2BINNED fps:=5 tf_prefix:=azure1_
+$ roslaunch azure_kinect_manager single_azure_manager.launch 
+$ rosservice call /azure1/get_camera_pose_single_markerboard "publish_worldmap: true
+```
+<img src="../../imgs/extrinsic_calibration.png" height="200">
 
