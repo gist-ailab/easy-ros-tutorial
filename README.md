@@ -15,6 +15,7 @@
 <img src="./imgs/color_detection.png" height="100">
 - [extrinsic calibration](./src/camera/README.md)   
 <img src="./imgs/extrinsic_calibration.png" height="100">
+- [pointcloud processing](./src/camera/pointcloud_processor.py)   
 
 3. [Deep Learning](./src/deep_learning/README.md)
 - [image classification](./src/camera/img_classifier.py)  

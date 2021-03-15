@@ -43,3 +43,8 @@ $ rosservice call /azure1/get_camera_pose_single_markerboard "publish_worldmap: 
 ```
 <img src="../../imgs/extrinsic_calibration.png" height="200">
 
+6. Pointcloud processing
+
+```
+$ rosrun easy_ros_tutorial ponitcloud_processor.py 
+```
