@@ -13,15 +13,20 @@
 2. [Camera](./src/camera/README.md)
 - [rgbd capture](./src/camera/rgbd_capturer.py)  
 <img src="./imgs/rgbd_capture.png" height="100">
+
 - [color detection](./src/camera/color_detector.py)   
 <img src="./imgs/color_detection.png" height="100">
+
 - [extrinsic calibration](./src/camera/README.md)   
 <img src="./imgs/extrinsic_calibration.png" height="100">
+
 - [pointcloud processing](./src/camera/pointcloud_processor.py)   
 
 3. [Deep Learning](./src/deep_learning/README.md)
+
 - [image classification](./src/camera/img_classifier.py)  
 <img src="./imgs/image_classification.png" height="100">
+
 - [object detection](./src/deep_learning/object_detector.py)  
 <img src="./imgs/object_detection.png" height="100">
 
