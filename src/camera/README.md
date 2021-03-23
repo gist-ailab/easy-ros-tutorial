@@ -21,10 +21,18 @@ $ cd ~/catkin_ws && catkin_make
 3. Launch k4a driver
 ```
 $ roslaunch azure_kinect_ros_driver driver.launch \
-color_resolution:=720P depth_mode:=NFOV_2X2BINNED fps:=5
+color_resolution:=720P depth_mode:=WFOV_BINNED fps:=5
 ```
 
-4. Color detection 
+4. RGB-D Capture
+
+```
+$ rosrun easy_ros_tutorial rgbd_capturer.py
+```
+<img src="../../imgs/rgbd_capture.png" height="150">
+
+
+5. Color detection 
 ```
 rosrun easy_ros_tutorial color_detector.py 
 rosrun rqt_image_view rqt_image_view
@@ -33,17 +41,17 @@ rosrun rqt_image_view rqt_image_view
 <img src="../../imgs/color_detection.png" height="150">
 
 
-5. Extrinsic calibration ([azure_kinect_manager](https://github.com/SeungBack/azure_kinect_manager))
+6. Extrinsic calibration ([azure_kinect_manager](https://github.com/SeungBack/azure_kinect_manager))
 ```
 $ cd ~/catkin_ws/src
 $ git clone https://github.com/SeungBack/azure_kinect_manager
-$ ROS_NAMESPACE=azure1 roslaunch azure_kinect_ros_driver driver.launch color_resolution:=2160P depth_mode:=NFOV_2X2BINNED fps:=5 tf_prefix:=azure1_
+$ ROS_NAMESPACE=azure1 roslaunch azure_kinect_ros_driver driver.launch color_resolution:=2160P depth_mode:=WFOV_2X2BINNED fps:=5 tf_prefix:=azure1_
 $ roslaunch azure_kinect_manager single_azure_manager.launch 
 $ rosservice call /azure1/get_camera_pose_single_markerboard "publish_worldmap: true
 ```
 <img src="../../imgs/extrinsic_calibration.png" height="200">
 
-6. Pointcloud processing
+7. Pointcloud processing
 
 ```
 $ rosrun easy_ros_tutorial ponitcloud_processor.py 

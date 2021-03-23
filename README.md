@@ -11,6 +11,8 @@
 
 1. [Environment Setup](./EnvSetup.md)
 2. [Camera](./src/camera/README.md)
+- [rgbd capture](./src/camera/rgbd_capturer.py)  
+<img src="./imgs/rgbd_capture.png" height="100">
 - [color detection](./src/camera/color_detector.py)   
 <img src="./imgs/color_detection.png" height="100">
 - [extrinsic calibration](./src/camera/README.md)   
