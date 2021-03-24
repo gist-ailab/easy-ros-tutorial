@@ -21,7 +21,7 @@ $ cd ~/catkin_ws && catkin_make
 3. Launch k4a driver
 ```
 $ roslaunch azure_kinect_ros_driver driver.launch \
-color_resolution:=720P depth_mode:=WFOV_BINNED fps:=5
+color_resolution:=720P depth_mode:=WFOV_UNBINNED fps:=5
 ```
 
 4. RGB-D Capture
